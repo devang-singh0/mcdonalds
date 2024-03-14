@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=PT+Sans&family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'PT Sans', sans-serif;
+    color: #ffffff;
+}
+body{
+    background-color: red;
+}
+section{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    overflow: hidden;
+}
+header{
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+}
+header img{
+    height: 80px;
+}
+header ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+header ul li{
+    margin-left: 10px;
+    text-transform: capitalize;
+    font-weight: 600;
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 6px 20px;
+    text-shadow: 0px 0px 2px rgb(255, 0, 0);
+}
+header ul li:hover,
+header ul .active{
+    background: white;
+    color: black;
+    border-radius: 15px;
+    text-shadow: none;
+}
+
+main{
+    display: flex;
+    position: relative;
+    padding: 0 100px;
+    justify-content: space-between;
+}
+main #txt{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main #txt h2{
+    font-size: 4vw;
+}
+main #txt h2 span{
+    font-weight: 900;
+    color: #e5ff00;
+    text-shadow: 0px 0px 4px red;
+}
+main #txt p{
+    margin: 20px 0px;
+}
+main #txt button{
+    text-transform: capitalize;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    width: 200px;
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 6px 20px;
+    color: black;
+}
+main #img{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    padding-left: 200px;
+    align-items: center;
+}
+main #img img{
+    height: 40vw;
+}
+main #thumb{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -50px;
+    cursor: pointer;
+}
+main #thumb img{
+    height: 75px;
+    transition: 0.5s;
+}
+main #thumb img:nth-child(1){
+    margin-right: -15px;
+}
+main #thumb img:hover{
+    transform: translateY(-20px);
+}
+main #social{
+    position: absolute;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+main #social ion-icon{
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+
+}
+#background{
+    position: absolute;
+    height: 800px;
+    width: 800px;
+    background-color: #e5ff00;
+    transform: translateY(-50%) rotate(45deg);
+    right: -500px;
+    top: 50%;
+    z-index: -1;
+}
+header label{
+    display: none;
+}
+@media (max-width: 800px){
+    section{
+        overflow-y: visible;
+        overflow-y: hidden;
+    }
+    header label{
+        display: block;
+        z-index: 3;
+    }
+    header img{
+        height: 50px;
+    }
+    header label ion-icon{
+        color: white;
+        font-size: 30px;
+        position: absolute;
+        top: 35px;
+        right: 30px;
+    }
+    header ul{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background-color: #e5ff00;
+        z-index: 2;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        justify-content: center;
+        transform: translateX(-100%);
+        transition: 0.5s;
+    }
+    header ul li{
+        color: white;
+        background-color: red;
+        border-radius: 0;
+        width: 180px;
+        text-align: center;
+    }
+    header ul li:hover,
+    header ul .active{
+        color: white;
+        background-color: red;
+        border-radius: 0;
+        width: 180px;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+    .inactive{
+        transform: translateX(0);
+    }
+    main{
+        flex-wrap: wrap;
+        height: 85vh;
+    }
+    main #txt{
+        width: 80vw;
+        margin: 50px auto;
+        text-align: center;
+    }
+    main #txt h2{
+        font-size: 30px;
+    }
+    main #txt button{
+        margin: auto;
+    }
+    main #img{
+        width: 80vw;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0;
+        padding-bottom: 200px;
+    }
+    main #img img{
+        padding: 0 0;
+    }
+    main #thumb{
+        bottom: 0px;
+    }
+    main #thumb img{
+        height: 50px;
+    }
+}
